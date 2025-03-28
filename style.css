@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6B48FF, #00DDEB);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    color: #6B48FF;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.input-section {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #6B48FF;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+h1 img{
+    height:30px;
+    vertical-align: baseline;
+}
+
+input:focus {
+    border-color: #00DDEB;
+}
+
+button {
+    padding: 12px 25px;
+    background: linear-gradient(90deg, #6B48FF, #00DDEB); 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #FF6B6B, #6B48FF); 
+    transform: translateY(-2px);
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #F5F7FA;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+ul li {
+    position: relative; /* Needed for the ::before pseudo-element */
+    padding-left: 30px; /* Space for the tick mark */
+}
+
+ul li::before {
+    content: "○"; /* Unchecked circle */
+    font-size: 20px;
+    color: gray;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+ul li.completed::before {
+    content: "✔"; /* Tick mark when completed */
+    color: green;
+    font-weight: bold;
+}
+li:hover {
+    transform: translateX(5px);
+    background: #e8f0fe;
+    cursor:pointer;
+}
+
+li.completed {
+    text-decoration: line-through;
+    background: #d4edda;
+    color: #155724;
+}
+
+li span {
+    flex: 1;
+    font-size: 16px;
+    color: #333;
+    cursor:pointer;
+}
+
+li div {
+    display: flex;
+    gap: 10px;
+}
+
+li button {
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+ul li span{
+    position:absolute;
+    right:0;
+    top:5px;
+    width:40px;
+    height:40px;
+    color:black;
+    line-height:40px;
+    text-align:center;
+    border-radius:50%;
+}
+
+ul li span:hover{
+    background:rgba(0, 0, 0, 0.1);
+}
